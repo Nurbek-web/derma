@@ -97,7 +97,7 @@ $("#predict-button").click(async function () {
 	let top5 = Array.from(predictions)
 		.map(function (p, i) { // this is Array.map
 			return {
-				probability: p,
+				probability: p * 100,
 				className: TARGET_CLASSES[i] 
 			};
 				
@@ -117,7 +117,7 @@ $("#predict-button").click(async function () {
 		
 			// ist-style-type:none removes the numbers.
 			// https://www.w3schools.com/html/html_lists.asp
-			$("#prediction-list").append(`<li style="list-style-type:none;">${p.className}: ${p.probability.toFixed(3)}</li>`);
+			$("#prediction-list").append(`<li style="list-style-type:none;">${p.className}: ${p.probability.toFixed(3)}%</li>`);
 		
 			
 		});
