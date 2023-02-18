@@ -33,8 +33,8 @@ function predictOnLoad() {
 let model;
 (async function () {
 	
-	model = await tf.loadModel('https://teal-marshmallow-392fb8.netlify.app/final_model_kaggle_version1/model.json');
-	$("#selected-image").attr("src", "https://teal-marshmallow-392fb8.netlify.app/assets/samplepic.jpg");
+	model = await tf.loadModel('https://dermanis.netlify.app//final_model_kaggle_version1/model.json');
+	$("#selected-image").attr("src", "https://dermanis.netlify.app//assets/samplepic.jpg");
 	
 	// Hide the model loading spinner
 	// This line of html gets hidden:
