@@ -64,7 +64,7 @@ async function model_makePrediction(fname) {
 	//$("#prediction-list").empty();
 	top5.forEach(function (p) {
 	
-		$("#prediction-list").append(`<li style="list-style-type:none;">${p.className}: ${p.probability.toFixed(3)}</li>`);
+		$("#prediction-list").append(`<li style="list-style-type:none;">${p.className}: ${p.probability.toFixed(3) * 100}</li>`);
 	
 		
 	});
