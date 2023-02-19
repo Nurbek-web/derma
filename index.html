@@ -16,18 +16,20 @@
 <!--Link to Font Awesome icons-->
 <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.2/css/all.css' integrity='sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns' crossorigin='anonymous'>
 
-
-
 <!--Link to fonts from google fonts-->
 <link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
-
 <link rel="shortcut icon" type="image/png" href="robotfavicon.png">
-
 
 <style>
 html,body,h2,h3,h4,p,h5,li {font-family: Roboto, sans-serif}
+body {
+	background-image: url("./assets/777777774.svg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
 </style>
 
 
@@ -36,7 +38,7 @@ html,body,h2,h3,h4,p,h5,li {font-family: Roboto, sans-serif}
 
 
 
-<body class="bground-color">
+<body class="bground-color" style="background-color: #9DF3C4;">
 
 
 
@@ -47,7 +49,7 @@ and is wrapped around the whole page content. -->
 
 
 <!-- 1. HOME PAGE -->
-<div class="tabbed w3-animate-opacity w3-white" id="home">
+<div class="tabbed w3-animate-opacity" id="home">
 	
 	
 <!-- Top Bar -->
@@ -77,7 +79,7 @@ and is wrapped around the whole page content. -->
 <!-- Button -->
 <div id="btnn" class="w3-center">
 	
-	<button class="w3-btn w3-deep-orange w3-hover-blue w3-round w3-margin-bottom adjust-spacing btn-font w3-padding w3-space-letters w3-text-white" onclick="setTimeout(simulateClick.bind(null, 'image-selector'), 200)"><i class='fas fa-camera w3-padding-right' style='font-size:15px'></i>
+	<button style="background-color: #62D2A2;" class="btn w3-btn w3-round w3-margin-bottom adjust-spacing btn-font w3-padding w3-space-letters w3-text-white" onclick="setTimeout(simulateClick.bind(null, 'image-selector'), 200)"><i class='fas fa-camera w3-padding-right' style='font-size:15px'></i>
 		<b>Skin Lesion Analyzer</b></button>
 	<!--<p class="w3-text-teal">jpeg or png</p>-->
 </div> 
@@ -85,9 +87,9 @@ and is wrapped around the whole page content. -->
 
 
 <div class="w3-center">
-	<div  class="progress-bar w3-text-teal space-letters">
+	<div  class="progress-bar  space-letters">
 	<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-	<p>Model is loading...</p></div>
+	<p><b style="font-size: 25px;">Model is loading...</b></p></div>
 </div>
 
 <!-- Progress Bar 
@@ -100,15 +102,14 @@ and causes it to fail.-->
 
 
 <!-- Results Box -->
-<div class="w3-center w3-border add-margin side-margin w3-round w3-sand
-text-color space-letters bottom-margin dont-break-out">
+<div style="background-color: #1FAB89;" class="w3-center w3-border add-margin side-margin w3-round space-letters bottom-margin dont-break-out">
 
 	<p>Results</p>
 	
 	<!-- Remember that an ordered or unordered list has tabs by default.
 	CSS is not styling the prediction outputs. The tabs you see are the default
 	tabs associated with lists.-->
-	<ol class='w3-left-align text-color' id='prediction-list'></ol>
+	<ol class='w3-left-align' style="background-color: #62D2A2;" id='prediction-list'></ol>
 		
 </div>
 
