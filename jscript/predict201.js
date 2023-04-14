@@ -90,7 +90,7 @@ $("#predict-button").click(async function () {
 	let top5 = Array.from(predictions)
 		.map(function (p, i) { // this is Array.map
 			return {
-				probability: p,
+				probability: p * 100,
 				className: SKIN_CLASSES[i] // we are selecting the value from the obj
 			};
 				
@@ -104,7 +104,7 @@ $("#predict-button").click(async function () {
 $("#prediction-list").empty();
 top5.forEach(function (p) {
 
-	$("#prediction-list").append(`<li>${p.className}: ${p.probability.toFixed(6)}</li>`);
+	$("#prediction-list").append(`<li>${p.className}: ${p.probability.toFixed(6)}%</li>`);
 
 	
 	});
